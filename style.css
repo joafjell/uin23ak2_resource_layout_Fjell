@@ -1,0 +1,127 @@
+:root {
+    --gray: rgb(112, 112, 112);
+    --gray_2: rgb(194, 194, 194);
+    --gray_3: rgb(237, 237, 237);
+    --nyanblue: rgb(35, 223, 230);
+    --white: rgb(255, 255, 255);
+
+}
+
+* {
+    font-family: Arial;
+}
+
+.category_title {
+    text-transform: uppercase;
+    color: var(--gray);
+    font-size: 30px;
+}
+
+#container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    padding: 2.5rem 0;
+}
+
+.cssInfo {
+    margin: 0 1rem 0 1rem;
+}
+
+#header {
+    border: 1px solid var(--gray);
+    display: flex;
+    padding: 1rem;
+    padding-left: 2rem;
+}
+
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+}
+
+main {
+    border: 1px solid var(--gray);
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 2rem;
+
+}
+
+.buttonSection {
+    overflow: hidden;
+    margin-top: 3rem;
+    width: 100%;
+}
+section button {
+    text-decoration: none;
+    color: var(--gray);
+    background-color: var(--gray_3);
+    display: inline-block;
+    border-top: 1px solid var(--gray_2);
+    border-left: 1px solid var(--gray_2);
+    border-right: 1px solid var(--gray_2);
+    border-bottom: none;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    transition: ease-in-out .4s;
+}
+
+section button:hover {
+    background-color: var(--nyanblue);
+    color: var(--gray_2);
+    border-color: var(--nyanblue);
+}
+
+section button:active {
+    background-color: var(--nyanblue);
+    color: var(--white);
+    border-color: var(--nyanblue);
+}
+
+
+/*nav {
+    width: 100%;
+    margin-top: 3rem;
+    border-bottom: 5px solid var(--nyanblue);
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--gray);
+    background-color: var(--white);
+    display: inline-block;
+    border-top: 1px solid var(--gray_2);
+    border-left: 1px solid var(--gray_2);
+    border-right: 1px solid var(--gray_2);
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    transition: ease-in-out .4s;
+    
+}
+
+nav a.htmlInfo {
+    background-color: var(--nyanblue);
+    color: var(--white);
+    border-color: var(--nyanblue);
+}
+
+nav a:hover {
+    background-color: var(--nyanblue);
+    color: var(--gray_2);
+    border-color: var(--nyanblue);
+}*/
+
+.text {
+    padding-right: 4rem;
+    font-size: 20px;
+    color: var(--gray);
+}
+
+#tittel {
+    text-decoration: none;
+    color: var(--gray);
+}
