@@ -8,49 +8,22 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <div id="container">
+    <div class="container">
         <header id="header">
-            <a href="index.html" id="tittel">
+            <a href="index.html" id="title">
                 <h1>RESSURSARKIV</h1>
             </a>
         </header>
-        <!--<nav>
-            <a class="htmlInfo" onClick="toggleInfoHtml()">kategori 1</a>
-            <a class="cssInfo" onClick="toggleCss()">kategori 2</a>
-            <a class="javaScriptInfo" onClick="toggleJavaScript()"> kategori 3</a>
-        </nav>-->
-        <section class="buttonSection">
-            <button class="" onClick="toggleInfoHtml()">HTML</button>
-            <button class="" onClick="toggleCss()">CSS</button>
-            <button class="" onClick="">javaScript</button>
-            <button class="" onClick="">React</button>
-            <button class="" onClick="">Sanity and headless CMS</button>
-        </section> <!--Inspirasjon https://www.w3schools.com/howto/howto_js_tabs.asp-->
+        <nav>
+            <a class="navBox" id="CSS" onClick="renderCategory(event.target.id)">CSS</a>
+            <a class="navBox" class="navObject" id="HTML" onClick="renderCategory(event.target.id)">HTML</a>
+            <a class="navBox" class="navObject" id="JavaScript" onClick="renderCategory(event.target.id)">javascript</a>
+            <a class="navBox" class="navObject" id="React" onClick="renderCategory(event.target.id)">React</a>
+            <a class="navBox" id="Sanity and headless CMS" onClick="renderCategory(event.target.id)">Sanity and Headless CMS</a>
+        </nav>
         <main>
             <section>
-                <article id="htmlInfo" class="hidden" >
-                    <h2 class="category_title">
-
-                    </h2>
-                    <p class="text_info">
-                    </p>
-                    <ul>
-                        <li>
-
-                        </li>
-                    </ul>
-                  
-                </article>
-                <article>
-                    
-                </article>
-                <article>
-
-                </article>
-                <article>
-
-                </article>
-                <article>
+                <article id="Info">
 
                 </article>
             </section>

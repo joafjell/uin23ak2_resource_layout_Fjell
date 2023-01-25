@@ -95,35 +95,52 @@ const resources = [
     },
 ]
 
-
-
-function renderCategory() {
-    let information = ""
+function renderCategory(id) {
+    let information = ``;
     resources.map
-    ((info) => information += `
+    ((info) => {
+    if (id === info.category) {
+    information += `
+    <h2 class="category_title">${info.category}</h2>
+    <p class="textInfo">${info.text}
+        ${info.sources.map(source =>`
+            <li>
+                <a class="links" href="${source.url}">${source.title}</a>
+            </li>
+        </p>`)}     
+    `}}
+    )
+    console.log("#"+id)
+    
+    if (document.querySelector("#"+id).classList.contains("active")){
+        console.log("funke?")
+        document.querySelector("#"+id).classList.remove("active")
+    }
+    else{
+        document.querySelector("#"+id).classList.add("active")
+    }
+    document.getElementById("Info").innerHTML=information
+    
+
+
+}
+
+function toggleCart(id) {
+    document.querySelector("#"+id).classList.toggle("active")
+}
+
+
+/*function htmlCategory() {
+    let html = ""
+    information.map((htmlInformation, index=0) => html =+ `
     <h2 class="category_title">${info.category}</h2>
     <p class="text_info">${info.text}</p>
         ${info.sources.map(source =>`<li>
             <a href="${source.url}">${source.title}</a>
-        </li>`)}     
+        </li>`)}
     `)
 
-    /*document.querySelector("resources").innerHTML = HTML*/
-    document.getElementById("htmlInfo").innerHTML=information
+    document.getElementById("htmlInfo").innerHTML=htmlInformation
+}*/
 
 
-}   
-renderCategory()
-
-function toggleInfoHtml() {
-    document.querySelector("#htmlInfo").classList.toggle("hidden")
-}
-
-
-function toggleCss() {
-    document.querySelector("#cssInfo").classList.toggle("hidden")
-}
-
-function toggleJavaScript() {
-    document.querySelector("#javaScroptInfo").classList.toggle("hidden")
-}
